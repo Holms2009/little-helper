@@ -1,0 +1,19 @@
+@import '/src/shared/styles/';
+
+.day-info {
+  @include section-style;
+
+  &__header {
+    padding-bottom : 8px;
+    display        : flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid $COLOR_GREY_1;
+  }
+
+  &__date {
+    &-value {
+      @include font-16-bold;
+    }
+  }
+}

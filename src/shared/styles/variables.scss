@@ -1,3 +1,5 @@
+//Colors
+
 :root {
   --COLOR_WHITE_1 : #ffffff;
   --COLOR_WHITE_2 : #f8f8f8;
@@ -26,3 +28,11 @@ $COLOR_BLUE_1  : #30bbf2;
 $COLOR_BLUE_2  : #acdef1;
 $COLOR_PURPLE_1: #f25bf5;
 $COLOR_YELLOW_1: #f5d445;
+
+
+//Other
+
+$sectionPadding: 16px;
+
+$sectionShadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.1);
+$borderRadius: 12px;

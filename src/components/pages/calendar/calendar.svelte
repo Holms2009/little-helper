@@ -2,32 +2,56 @@
   import block from "bem-cn";
   import { addMonth } from "@formkit/tempo";
 
-  import { Month, PageHeader } from "@molecules";
+  import { createDatesArray } from "./utils";
+  import { MonthCard, PageHeader } from "@molecules";
+  import { DayInfo } from "@organisms";
+  import { EMonths } from "@shared/config/calendar";
 
   const b = block("calendar");
+  const currentDate = new Date();
 
-  let currentDate = new Date();
+  let activeDate = currentDate;
   let selectedDate = currentDate;
 
-  function handleMonthChange(evt: CustomEvent) {
-    const direction = evt.detail.direction === "next" ? 1 : -1;
+  $: activeYear = activeDate.getFullYear();
+  $: activeMonth = activeDate.getMonth();
 
-    selectedDate = addMonth(selectedDate, direction);
+  function toggleMonth(modifier: "next" | "prev") {
+    const direction = modifier === "next" ? 1 : -1;
+
+    activeDate = addMonth(activeDate, direction);
+  }
+
+  function handleMonthChange(evt: CustomEvent) {
+    toggleMonth(evt.detail.direction);
+  }
+
+  function handleDateSelect(evt: CustomEvent) {
+    const { type, date } = evt.detail;
+
+    if (type !== "current") toggleMonth(type);
+
+    selectedDate = date;
   }
 </script>
 
 <div class={b()}>
   <PageHeader>
-    <div slot="right">
-      Right slot
-    </div>
+    <div slot="right">Right slot</div>
   </PageHeader>
-  <div class={b('month')}>
-    <Month
-      year={selectedDate.getFullYear()}
-      month={selectedDate.getMonth()}
-      on:change-month={handleMonthChange}
-    />
+  <div class={b("content")}>
+    <div class={b("month")}>
+      <MonthCard
+        dates={createDatesArray(activeYear, activeMonth)}
+        monthName={EMonths[activeMonth]}
+        selectedDate={selectedDate}
+        on:change-month={handleMonthChange}
+        on:date-select={handleDateSelect}
+      />
+    </div>
+    <div class={b("day-info")}>
+      <DayInfo date={selectedDate} />
+    </div>
   </div>
 </div>
 

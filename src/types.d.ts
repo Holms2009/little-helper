@@ -8,12 +8,9 @@ type TDayOfWeek = {
   number: number;
 }
 
-type TMonth = {
-  name: string;
-  number: number;
-}
-
 type TDate = {
   value: number;
   type: 'prev' | 'current' | 'next',
+  isTooday: boolean,
+  fullDate: Date,
 }

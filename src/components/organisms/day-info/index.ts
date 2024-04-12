@@ -1,0 +1,1 @@
+export { default as DayInfo } from './day-info.svelte';
