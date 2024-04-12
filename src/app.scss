@@ -1,0 +1,26 @@
+@import 'normalize.css';
+@import './index.css';
+@import './shared/styles/';
+
+html {
+  background-color: var(--COLOR_WHITE_2);
+}
+
+* {
+  color: var(--COLOR_BLACK_1);
+  transition: background 0.3s ease;
+}
+
+#root,
+.app {
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+
+  &__page-content {
+    padding: 32px;
+    width  : 100%;
+  }
+}

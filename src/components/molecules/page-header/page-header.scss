@@ -1,0 +1,9 @@
+@import '/src/shared/styles/';
+
+.page-header {
+  padding: 0 0 16px;
+  display: flex;
+  justify-content: space-between;
+
+  border-bottom: 1px solid $COLOR_GREY_1;
+}

@@ -1,0 +1,46 @@
+@import '/src/shared/styles/';
+
+.side-bar-item {
+  @include buttons-text;
+
+  position: relative;
+  z-index: 1;
+
+  padding: 16px 32px;
+  display: inline-block;
+
+  background: none;
+  border: none;
+
+  transition: color 0.3s ease;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 5px;
+    height: 100%;
+
+    background: var(--COLOR_BLUE_1);
+    transition: width 0.3s ease;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: $COLOR_WHITE_1;
+
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &_active {
+    background: var(--COLOR_BLUE_1);
+    color: $COLOR_WHITE_1;
+    cursor: default;
+  }
+}

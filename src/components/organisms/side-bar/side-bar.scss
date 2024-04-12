@@ -1,0 +1,25 @@
+@import '/src/shared/styles/';
+
+.side-bar {
+  padding: 32px 32px 32px 0;
+  width  : 300px;
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--COLOR_WHITE_1);
+  box-shadow: -5px 0 14px 2px rgba(0, 0, 0, 0.1);
+
+  &__menu {
+    display       : flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__bottom {
+    margin-top: auto;
+    padding-left: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

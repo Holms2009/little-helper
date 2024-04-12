@@ -1,0 +1,28 @@
+:root {
+  --COLOR_WHITE_1 : #ffffff;
+  --COLOR_WHITE_2 : #f8f8f8;
+  --COLOR_BLACK_1 : #292826;
+  --COLOR_BLACK_2 : #22211f;
+  --COLOR_GREY_1  : #d6d6d6;
+  --COLOR_BLUE_1  : #30bbf2;
+  --COLOR_BLUE_2  : #acdef1;
+  --COLOR_PURPLE_1: #f25bf5;
+  --COLOR_YELLOW_1: #f5d445;
+}
+
+html[data-theme="dark"] {
+  --COLOR_WHITE_1: #292826;
+  --COLOR_WHITE_2: #22211f;
+  --COLOR_BLACK_1: #ffffff;
+  --COLOR_BLACK_2: #eeeeee;
+  --COLOR_BLUE_1 : #76bad4;
+}
+
+$COLOR_WHITE_1 : #ffffff;
+$COLOR_WHITE_2 : #eeeeee;
+$COLOR_BLACK_1 : #292826;
+$COLOR_GREY_1  : #d6d6d6;
+$COLOR_BLUE_1  : #30bbf2;
+$COLOR_BLUE_2  : #acdef1;
+$COLOR_PURPLE_1: #f25bf5;
+$COLOR_YELLOW_1: #f5d445;
