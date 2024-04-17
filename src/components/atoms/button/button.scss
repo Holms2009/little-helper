@@ -1,0 +1,22 @@
+@import '/src/shared/styles/';
+
+.button {
+  @include buttons-text;
+
+  padding: 8px 30px;
+  width: fit-content;
+  display: block;
+
+  color: $COLOR_WHITE_1;
+  white-space: nowrap;
+
+  background-color: var(--COLOR_BLUE_1);
+  border: none;
+
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

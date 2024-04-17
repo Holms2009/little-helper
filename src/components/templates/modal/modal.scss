@@ -1,0 +1,43 @@
+@import '/src/shared/styles/';
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  padding: 20vh 20vw;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  background: transparentize($COLOR_BLACK_1, 0.3);
+  overflow: auto;
+
+  &__content {
+    position: relative;
+    
+    padding: 48px 32px 32px;
+    width: fit-content;
+    height: fit-content;
+
+    background-color: var(--COLOR_WHITE_2);
+    border-radius: $borderRadius;
+  }
+
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    background: url('../../../shared/assets/images/icons/close-cross.svg') no-repeat 50% 50%;
+    background-size: cover;
+
+    cursor: pointer;
+  }
+}

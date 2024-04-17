@@ -1,0 +1,19 @@
+@import '/src/shared/styles/';
+
+.input-field {
+  width: 100%;
+
+  &__input {
+    padding: 8px;
+    width: 100%;
+
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--COLOR_GREY_1);
+  
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid var(--COLOR_BLUE_1);
+    }
+  }
+}

@@ -27,6 +27,7 @@
     "@formkit/tempo": "^0.0.19",
     "axios": "^1.6.8",
     "bem-cn": "^3.0.1",
+    "firebase": "^10.11.0",
     "normalize.css": "^8.0.1"
   }
 }

@@ -1,0 +1,12 @@
+@import '/src/shared/styles/';
+
+.auth-block {
+  padding: 0 16px 8px;
+
+  border-bottom: 1px solid var(--COLOR_BLUE_1);
+
+  &__no-user {
+    display        : flex;
+    justify-content: space-between;
+  }
+}

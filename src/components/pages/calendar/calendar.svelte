@@ -16,17 +16,17 @@
   $: activeYear = activeDate.getFullYear();
   $: activeMonth = activeDate.getMonth();
 
-  function toggleMonth(modifier: "next" | "prev") {
+  function toggleMonth(modifier: "next" | "current" | "prev") {
     const direction = modifier === "next" ? 1 : -1;
 
     activeDate = addMonth(activeDate, direction);
   }
 
-  function handleMonthChange(evt: CustomEvent) {
+  function handleMonthChange(evt: CustomEvent<EvtChangeMonthPayload>) {
     toggleMonth(evt.detail.direction);
   }
 
-  function handleDateSelect(evt: CustomEvent) {
+  function handleDateSelect(evt: CustomEvent<EvtDateSelectPayload>) {
     const { type, date } = evt.detail;
 
     if (type !== "current") toggleMonth(type);

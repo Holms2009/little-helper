@@ -9,9 +9,9 @@
   export let selectedDate: Date;
 
   const b = block("month-card");
-  const dispatch = createEventDispatcher();
+  const dispatch = createEventDispatcher<EvtChangeMonth & EvtDateSelect>();
 
-  function handleButtonClick(direction: string) {
+  function handleButtonClick(direction: 'prev' | 'current' | 'next') {
     dispatch("change-month", { direction });
   }
 

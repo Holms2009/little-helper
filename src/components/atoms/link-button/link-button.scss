@@ -1,0 +1,17 @@
+@import '/src/shared/styles/';
+
+.link-button {
+  @include buttons-text;
+
+  text-transform: none;
+
+  border: none;
+  background: none;
+
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,24 @@
+@import '/src/shared/styles/';
+
+.sign-in-form {
+  width: 25vw;
+
+  &__title {
+    @include section-title;
+
+    text-align: center;
+  }
+
+  &__form {
+    margin-top: 16px;
+  }
+
+  & :global(.input-field:not(:first-child)) {
+    margin-top: 8px;
+  }
+
+  & :global(.button) {
+    margin: 32px auto 0;
+  }
+  
+}

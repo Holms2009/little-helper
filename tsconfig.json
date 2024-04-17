@@ -10,9 +10,12 @@
     "isolatedModules": true,
     "baseUrl": "src",
     "paths": {
+      "@api": ["shared/api"],
+      "@store": ["shared/store"],
       "@atoms": ["components/atoms"],
       "@molecules": ["components/molecules"],
       "@organisms": ["components/organisms"],
+      "@templates": ["components/templates"],
       "@pages": ["components/pages"],
       "@shared/*": ["shared/*"],
       "@assets/*": ["shared/assets/*"],

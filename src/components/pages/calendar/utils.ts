@@ -5,7 +5,7 @@ export function createDatesArray(year: number, month: number): TDate[] {
   const previousMonthDays = addPrevMonthDays(date);
   const currentMonthDays = addCurrentMonthDays(date);
   const nextMonthDays = addNextMonthDays(date, 35 - currentMonthDays.length - previousMonthDays.length);
-
+  
   return [
     ...previousMonthDays,
     ...currentMonthDays,
@@ -23,7 +23,7 @@ function addPrevMonthDays(date: Date) {
       value: prevMonthLength - i,
       type: 'prev',
       isTooday: false,
-      fullDate: addDay(date, -(i + 1)),
+      fullDate: addDay(date, -( i + 1)),
     });
   }
 

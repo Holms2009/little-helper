@@ -4,7 +4,7 @@
   position: relative;
 
   width : 45px;
-  height: 25px;
+  height: 24px;
 
   background-color: var(--COLOR_WHITE_2);
   border-radius   : 15px;
@@ -13,21 +13,21 @@
   &__button {
     position: absolute;
     top     : 50%;
-    left    : 5px;
+    left    : 3px;
 
-    width       : 21px;
-    aspect-ratio: 1 / 1;
+    width : 20px;
+    height: 20px;
 
     background-color: var(--COLOR_WHITE_1);
     border          : none;
     border-radius   : 50%;
 
-    transform: translate(0, -50%);
+    transform : translate(0, -50%);
     transition: all 0.3s ease;
-    cursor   : pointer;
+    cursor    : pointer;
 
     &_dark {
-      left: calc(100% - 5px);
+      left     : calc(100% - 3px);
       transform: translate(-100%, -50%);
     }
   }

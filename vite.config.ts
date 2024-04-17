@@ -50,9 +50,12 @@ export default defineConfig({
   },
   resolve: {
     alias: {
+      '@api': path.resolve(__dirname, './src/shared/api'),
+      '@store': path.resolve(__dirname, './src/shared/store'),
       '@atoms': path.resolve(__dirname, './src/components/atoms'),
       '@molecules': path.resolve(__dirname, './src/components/molecules'),
       '@organisms': path.resolve(__dirname, './src/components/organisms'),
+      '@templates': path.resolve(__dirname, './src/components/templates'),
       '@pages': path.resolve(__dirname, './src/components/pages'),
       '@shared': path.resolve(__dirname, './src/shared'),
       '@assets': path.resolve(__dirname, './src/shared/assets'),
