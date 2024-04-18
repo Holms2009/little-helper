@@ -4,7 +4,7 @@ type EvtChangeMonth = {
   "change-month": EvtChangeMonthPayload;
 }
 
-type EvtDateSelectPayload = { date: Date, type: 'prev' | 'current' | 'next' };
+type EvtDateSelectPayload = { date: Date };
 
 type EvtDateSelect = {
   "date-select": EvtDateSelectPayload;

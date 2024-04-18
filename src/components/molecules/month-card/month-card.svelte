@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { isEqual } from "@formkit/tempo";
   import { EDaysOfWeek } from "@shared/config/calendar";
   import block from "bem-cn";
 
@@ -11,12 +12,12 @@
   const b = block("month-card");
   const dispatch = createEventDispatcher<EvtChangeMonth & EvtDateSelect>();
 
-  function handleButtonClick(direction: 'prev' | 'current' | 'next') {
+  function handleButtonClick(direction: "prev" | "current" | "next") {
     dispatch("change-month", { direction });
   }
 
-  function handleDateClick(date: Date, type: 'prev' | 'current' | 'next') {
-    dispatch("date-select", { date, type });
+  function handleDateClick(date: Date) {
+    dispatch("date-select", { date });
   }
 </script>
 
@@ -47,9 +48,9 @@
         class={b("date", {
           faded: date.type !== "current",
           today: date.isTooday,
-          selected: date.fullDate === selectedDate
+          selected: isEqual(date.fullDate, selectedDate),
         })}
-        on:click={() => handleDateClick(date.fullDate, date.type)}
+        on:click={() => handleDateClick(date.fullDate)}
       >
         <span class={b("date-number")}>{date.value}</span>
       </button>
