@@ -2,7 +2,7 @@
 
 .month-card {
   @include section-style;
-  
+
   display       : flex;
   flex-direction: column;
 
@@ -33,8 +33,8 @@
   }
 
   &__days {
-    padding        : 0 0 8px;
-    display: grid;
+    padding              : 0 0 8px;
+    display              : grid;
     grid-template-columns: repeat(7, 1fr);
 
     border-bottom: 1px solid var(--COLOR_GREY_1);
@@ -43,7 +43,7 @@
   &__day {
     @include mono-font-16-regular;
 
-    text-align: center;
+    text-align : center;
     user-select: none;
   }
 
@@ -51,8 +51,9 @@
     margin-top           : 8px;
     height               : 100%;
     display              : grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(7, min-content);
     grid-template-rows   : repeat(5, 1fr);
+    justify-content      : space-around
   }
 
   &__date {
@@ -61,17 +62,17 @@
     position: relative;
     z-index : 1;
 
-    padding   : 8px;
-    display: flex;
+    padding        : 8px;
+    display        : flex;
     justify-content: center;
-    align-items: center;
+    align-items    : center;
 
-    border: none;
+    border    : none;
     background: none;
 
-    text-align: center;
+    text-align : center;
     user-select: none;
-    cursor: pointer;
+    cursor     : pointer;
 
     &::after {
       content: '';
@@ -81,7 +82,7 @@
       left    : 50%;
       z-index : -1;
 
-      height      : 45px;
+      height      : 40px;
       aspect-ratio: 1 / 1;
 
       opacity      : 0;
@@ -118,7 +119,7 @@
     }
 
     &_selected:not(&_today)::after {
-      opacity         : 1;
+      opacity: 1;
     }
   }
 }
