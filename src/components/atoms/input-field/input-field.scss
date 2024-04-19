@@ -15,5 +15,9 @@
       outline: none;
       border-bottom: 1px solid var(--COLOR_BLUE_1);
     }
+
+    &:disabled {
+      opacity: 0.5;
+    }
   }
 }

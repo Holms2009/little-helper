@@ -9,4 +9,31 @@
     display        : flex;
     justify-content: space-between;
   }
+
+  &__user {
+    display    : flex;
+    align-items: center;
+  }
+
+  &__user-wrapper {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__sign-out {
+    margin-left : auto;
+    width       : 25px;
+    aspect-ratio: 1 / 1;
+
+    background     : url('../../../shared/assets/images/icons/exit.svg') no-repeat 50% 50%;
+    background-size: contain;
+    border         : none;
+
+    transition: opacity 0.3s ease;
+    cursor    : pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 }

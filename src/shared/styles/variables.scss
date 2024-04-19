@@ -25,6 +25,10 @@ html[data-theme="dark"] {
   --COLOR_BLACK_2: #eeeeee;
   --COLOR_BLUE_1 : #76bad4;
   --COLOR_GREY_1  : #5f5f5f;
+
+  .inverted {
+    filter: invert(1);
+  }
 }
 
 $COLOR_WHITE_1 : #ffffff;

@@ -24,14 +24,14 @@
 <div class={b()}>
   <div class={b("header")}>
     <button
-      class={b("button", { prev: true })}
+      class={b("button", { prev: true }).mix('inverted')}
       on:click={() => handleButtonClick("prev")}
     />
     <div class={b("name")}>
       <span class={b("name-value")}>{monthName}</span>
     </div>
     <button
-      class={b("button", { next: true })}
+      class={b("button", { next: true }).mix('inverted')}
       on:click={() => handleButtonClick("next")}
     />
   </div>

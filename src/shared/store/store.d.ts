@@ -8,6 +8,8 @@ type TModalsStore = {
 
 //User store
 
-type TAuthData = {
+type TUserData = {
   uid: string;
+  email: string;
+  name: string;
 }

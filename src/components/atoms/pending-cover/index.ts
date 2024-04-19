@@ -1,0 +1,1 @@
+export { default as PendingCover } from './pending-cover.svelte';

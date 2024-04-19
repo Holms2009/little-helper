@@ -3,11 +3,12 @@
 
   export let text: string;
   export let type: 'button' | 'submit' = 'button';
+  export let disabled = false;
 
   const b = block("button");
 </script>
 
-<button class={b()} type={type} on:click>
+<button class={b()} type={type} on:click disabled={disabled}>
   {text}
 </button>
 

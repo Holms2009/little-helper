@@ -20,7 +20,7 @@
 <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 <section class={b()} on:click|self={closeModal} role="dialog">
   <div class={b("content")}>
-    <svelte:component this={component} />
+    <svelte:component this={component} on:close-modal={closeModal}/>
     <button class={b("close")} on:click={closeModal} />
   </div>
 </section>

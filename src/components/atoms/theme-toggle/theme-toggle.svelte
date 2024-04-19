@@ -9,16 +9,13 @@
   $: setActiveTheme(theme);
 
   function handleButtonClick() {
-    theme = theme === 'dark' ? 'light' : 'dark';
+    theme = theme === "dark" ? "light" : "dark";
   }
 </script>
 
-<div class={b()} title="Переключить тему">
-  <button
-    class={b("button", { dark: theme === 'dark' })}    
-    on:click={handleButtonClick}
-  />
-</div>
+<button class={b()} on:click={handleButtonClick} title="Переключить тему">
+  <div class={b("button", { dark: theme === "dark" })} />
+</button>
 
 <style lang="scss">
   @import "./theme-toggle.scss";
