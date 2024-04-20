@@ -21,7 +21,7 @@
 <section class={b()} on:click|self={closeModal} role="dialog">
   <div class={b("content")}>
     <svelte:component this={component} on:close-modal={closeModal}/>
-    <button class={b("close")} on:click={closeModal} />
+    <button class={b("close").mix('inverted')} on:click={closeModal} />
   </div>
 </section>
 

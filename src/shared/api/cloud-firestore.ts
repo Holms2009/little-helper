@@ -1,4 +1,4 @@
-import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs, getFirestore, query, where } from "firebase/firestore";
 
 import { app } from "./firebase";
 
@@ -10,4 +10,12 @@ export async function getUserData(uid: string) {
   const user = (await getDocs(q)).docs.at(0)?.data() as TUserData;
 
   return user; 
+}
+
+export async function getUserCalendar(uid: string) {
+  const docRef = doc(db, 'calendars', uid);
+  const docSnap = await getDoc(docRef);
+  const data = docSnap.data();  
+
+  return data ? data as TUserCalendar : null;  
 }

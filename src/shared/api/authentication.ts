@@ -1,20 +1,8 @@
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
 
 import { app } from "./firebase";
-import { userStore } from "@store";
-import { getUserData } from "./cloud-firestore";
 
-const auth = getAuth(app);
-
-onAuthStateChanged(auth, async (user) => {
-  if (user) {
-    const data = await getUserData(user.uid);
-
-    userStore.set(data);
-  } else {
-    userStore.set(null);
-  }
-})
+export const auth = getAuth(app);
 
 export async function signUpNewUser(email: string, password: string) {
   const response = await createUserWithEmailAndPassword(auth, email, password)

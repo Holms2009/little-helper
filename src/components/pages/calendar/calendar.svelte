@@ -7,6 +7,8 @@
   import { DayInfo } from "@organisms";
   import { EMonths } from "@shared/config/calendar";
 
+  export let calendar: TUserCalendar | null;
+
   const b = block("calendar");
 
   let activeDate = dayStart(new Date());
@@ -24,7 +26,7 @@
 
   function handleDateSelect({ detail }: CustomEvent<EvtDateSelectPayload>) {
     activeDate = detail.date;
-  }
+  }  
 </script>
 
 <div class={b()}>

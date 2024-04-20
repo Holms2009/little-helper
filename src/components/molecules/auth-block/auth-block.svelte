@@ -41,7 +41,7 @@
         <LinkButton on:click={handleUserClick}>{user.name}</LinkButton>
       </div>
       <button
-        class={b("sign-out")}
+        class={b("sign-out").mix('inverted')}
         on:click={handleSignOutClick}
         title="Выход"
       />

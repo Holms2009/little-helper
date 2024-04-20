@@ -1,5 +1,6 @@
 export { Avatar } from './avatar';
 export { Button } from './button';
+export { DropDownMenu } from './drop-down-menu';
 export { InputField } from './input-field';
 export { LinkButton } from './link-button';
 export { PendingCover } from './pending-cover';
