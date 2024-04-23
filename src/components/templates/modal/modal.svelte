@@ -1,13 +1,16 @@
 <script lang="ts">
   import block from "bem-cn";
 
-  import { SignInForm } from "@molecules";
+  import { SignInForm, SignUpForm } from "@molecules";
   import { modalsStore } from "@store";
 
   export let content: TModalWindows;
 
   const b = block("modal");
-  const children = [{ type: "signin", component: SignInForm }];
+  const children = [
+    { type: "signin", component: SignInForm },
+    { type: "signup", component: SignUpForm },
+  ];
 
   $: component = children.find((item) => item.type === content)?.component;
 

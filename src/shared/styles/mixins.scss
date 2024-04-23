@@ -16,6 +16,12 @@
   text-transform: uppercase;
 }
 
+@mixin font-10-regular() {
+  @include font-base;
+  font-size     : 10px;
+  font-weight   : 400;
+}
+
 @mixin font-14-regular() {
   @include font-base;
   font-size     : 14px;

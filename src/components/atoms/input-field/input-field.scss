@@ -19,5 +19,18 @@
     &:disabled {
       opacity: 0.5;
     }
+
+    &_error {
+      border-bottom: 1px solid $COLOR_RED;
+    }
+  }
+
+  &__error-message {
+    @include font-10-regular;
+
+    padding: 4px;
+    display: block;
+
+    color: $COLOR_RED;
   }
 }

@@ -12,9 +12,7 @@
   let password = "";
   let pending = false;
 
-  async function handleFormSubmit(evt: SubmitEvent) {
-    console.log('Foo');
-    
+  async function handleFormSubmit(evt: SubmitEvent) {    
     evt.preventDefault();
 
     if (email && password) {

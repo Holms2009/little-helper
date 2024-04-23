@@ -5,9 +5,7 @@ import { app } from "./firebase";
 export const auth = getAuth(app);
 
 export async function signUpNewUser(email: string, password: string) {
-  const response = await createUserWithEmailAndPassword(auth, email, password)
-    .then((res) => res)
-    .catch((err) => err)
+  const response = await createUserWithEmailAndPassword(auth, email, password);
 
   return response;
 }
