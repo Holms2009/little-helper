@@ -1,19 +1,25 @@
 @import '/src/shared/styles/';
 
 .day-info {
-  @include section-style;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
   &__header {
-    padding-bottom : 8px;
+    padding-bottom : 4px;
     display        : flex;
     justify-content: space-between;
-
-    border-bottom: 1px solid var(--COLOR_GREY_1);
   }
 
   &__date {
     &-value {
       @include font-16-bold;
     }
+  }
+
+  &__content {
+    @include section-style;
+
+    flex-grow: 1;
   }
 }

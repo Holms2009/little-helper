@@ -1,43 +1,17 @@
 @import '/src/shared/styles/';
 
 .month-card {
-  @include section-style;
-
   display       : flex;
   flex-direction: column;
-
-  &__header {
-    margin-bottom  : 8px;
-    display        : flex;
-    justify-content: space-between;
-    align-items    : center;
-  }
-
-  &__name {
-    @include font-20-bold;
-  }
-
-  &__button {
-    width : 20px;
-    height: 20px;
-
-    border         : none;
-    background     : url('../../../shared/assets/images/icons/triangle-right.svg') no-repeat 50% 50%;
-    background-size: cover;
-
-    cursor: pointer;
-
-    &_prev {
-      transform: rotate(180deg);
-    }
-  }
+  width: 100%;
+  aspect-ratio: 10 / 9;
 
   &__days {
     padding              : 0 0 8px;
     display              : grid;
     grid-template-columns: repeat(7, 1fr);
 
-    border-bottom: 1px solid var(--COLOR_GREY_1);
+    border-bottom: 2px solid var(--COLOR_GREY_1);
   }
 
   &__day {
@@ -49,11 +23,10 @@
 
   &__dates {
     margin-top           : 8px;
-    height               : 100%;
     display              : grid;
     grid-template-columns: repeat(7, min-content);
-    grid-template-rows   : repeat(5, 1fr);
-    justify-content      : space-around
+    justify-content      : space-around;
+    flex-grow: 1;
   }
 
   &__date {

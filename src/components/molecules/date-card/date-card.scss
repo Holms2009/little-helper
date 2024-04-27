@@ -1,0 +1,60 @@
+@import '/src/shared/styles/';
+
+.date-card {
+  position: relative;
+  z-index: 1;
+
+  padding   : 8px;
+  width: 100%;
+  aspect-ratio: 13 / 16;
+
+  border-top: 2px solid var(--COLOR_BLACK_2);
+  cursor    : pointer;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    top     : 0;
+    left    : 0;
+    z-index: -1;
+
+    width : 100%;
+    height: 0;
+
+    background-color: var(--COLOR_GREY_1);
+    opacity         : 0.5;
+    transition      : height 0.3s ease;
+  }
+
+  &:hover::after {
+    height: 100%;
+  }
+
+  &__date {
+    @include mono-font-20-bold;
+
+    padding-bottom: 4px;
+    color         : var(--COLOR_BLACK_2);
+
+    @media screen and (min-width: $bp-desktop) {
+      @include mono-font-28-bold;
+    }
+  }
+
+  &_faded {
+    border-color: var(--COLOR_GREY_2);
+  }
+
+  &_faded &__date {
+    color: var(--COLOR_GREY_2);
+  }
+
+  &_today {
+    border-color: var(--COLOR_BLUE_1);
+  }
+
+  &_today &__date {
+    color: var(--COLOR_BLUE_1);
+  }
+}

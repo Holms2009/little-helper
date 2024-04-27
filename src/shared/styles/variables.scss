@@ -1,8 +1,8 @@
 //Breakpoints
 $bp-desktop-xl: 1920px;
-$bp-desktop-l: 1600px;
-$bp-desktop: 1280px;
-$bp-desktop-m: 1440px;
+$bp-desktop-l : 1600px;
+$bp-desktop-m : 1440px;
+$bp-desktop   : 1280px;
 $bp-desktop-xs: 1024px;
 
 //Colors
@@ -11,8 +11,9 @@ $bp-desktop-xs: 1024px;
   --COLOR_WHITE_1 : #ffffff;
   --COLOR_WHITE_2 : #f8f8f8;
   --COLOR_BLACK_1 : #292826;
-  --COLOR_BLACK_2 : #22211f;
+  --COLOR_BLACK_2 : #4e4e4e;
   --COLOR_GREY_1  : #d6d6d6;
+  --COLOR_GREY_2  : #9b9b9b;
   --COLOR_BLUE_1  : #30bbf2;
   --COLOR_BLUE_2  : #acdef1;
   --COLOR_PURPLE_1: #f25bf5;
@@ -23,9 +24,9 @@ html[data-theme="dark"] {
   --COLOR_WHITE_1: #292826;
   --COLOR_WHITE_2: #22211f;
   --COLOR_BLACK_1: #ffffff;
-  --COLOR_BLACK_2: #eeeeee;
+  --COLOR_BLACK_2: #e2e2e2;
   --COLOR_BLUE_1 : #76bad4;
-  --COLOR_GREY_1  : #5f5f5f;
+  --COLOR_GREY_1 : #5f5f5f;
 
   .inverted {
     filter: invert(1);
@@ -33,9 +34,11 @@ html[data-theme="dark"] {
 }
 
 $COLOR_WHITE_1 : #ffffff;
-$COLOR_WHITE_2 : #eeeeee;
+$COLOR_WHITE_2 : #f8f8f8;
 $COLOR_BLACK_1 : #292826;
+$COLOR_BLACK_2 : #4e4e4e;
 $COLOR_GREY_1  : #d6d6d6;
+$COLOR_GREY_2  : #9b9b9b;
 $COLOR_BLUE_1  : #30bbf2;
 $COLOR_BLUE_2  : #acdef1;
 $COLOR_PURPLE_1: #f25bf5;
@@ -49,4 +52,4 @@ $COLOR_RED: #c64e4e;
 $sectionPadding: 16px;
 
 $sectionShadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.1);
-$borderRadius: 12px;
+$borderRadius : 12px;

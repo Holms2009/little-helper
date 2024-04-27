@@ -3,15 +3,17 @@
   import { addMonth, dayStart } from "@formkit/tempo";
 
   import { createDatesArray } from "./utils";
-  import { MonthCard, PageHeader } from "@molecules";
+  import { MonthToggle } from "@atoms";
+  import { DateCard, MonthCard, PageHeader } from "@molecules";
   import { DayInfo } from "@organisms";
-  import { EMonths } from "@shared/config/calendar";
+  import { EDaysOfWeek } from "@shared/config/calendar";
 
   export let calendar: TUserCalendar | null;
 
   const b = block("calendar");
 
   let activeDate = dayStart(new Date());
+  let view: TUiViews = "month";
 
   $: activeYear = activeDate.getFullYear();
   $: activeMonth = activeDate.getMonth();
@@ -26,26 +28,57 @@
 
   function handleDateSelect({ detail }: CustomEvent<EvtDateSelectPayload>) {
     activeDate = detail.date;
-  }  
+  }
+
+  function handeleViewChange({ detail }: CustomEvent<EvtChangeViewPayload>) {
+    view = detail.view;
+  }
 </script>
 
 <div class={b()}>
   <PageHeader>
-    <div slot="right">Right slot</div>
+    <MonthToggle
+      slot="left"
+      month={activeMonth}
+      year={activeYear}
+      on:change-month={handleMonthChange}
+      on:date-select={handleDateSelect}
+    />
   </PageHeader>
   <div class={b("content")}>
-    <div class={b("month")}>
-      <MonthCard
-        dates={createDatesArray(activeYear, activeMonth)}
-        monthName={EMonths[activeMonth]}
-        selectedDate={activeDate}
-        on:change-month={handleMonthChange}
-        on:date-select={handleDateSelect}
-      />
+    <div class={b("subtitle")}>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.
     </div>
-    <div class={b("day-info")}>
-      <DayInfo date={activeDate} />
-    </div>
+    {#if view === "month"}
+      <div class={b("full-view")}>
+        <div class={b("week-days")}>
+          {#each Object.keys(EDaysOfWeek).splice(7, 7) as day}
+            <div class={b("day")}>
+              <span class={b("day-name")}>{day}</span>
+            </div>
+          {/each}
+        </div>
+        <div class={b("dates")}>
+          {#each createDatesArray(activeYear, activeMonth) as date}
+            <DateCard
+              {date}
+              on:date-select={handleDateSelect}
+              on:change-view={handeleViewChange}
+            />
+          {/each}
+        </div>
+      </div>
+    {:else}
+      <div class={b("day-view")}>
+        <MonthCard
+          dates={createDatesArray(activeYear, activeMonth)}
+          selectedDate={activeDate}
+          on:date-select={handleDateSelect}
+        />
+        <DayInfo date={activeDate} />
+      </div>
+    {/if}
   </div>
 </div>
 

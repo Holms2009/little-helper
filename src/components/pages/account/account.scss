@@ -1,0 +1,7 @@
+@import '/src/shared/styles/';
+
+.account {
+  &__title-name {
+    @include font-title;
+  }
+}

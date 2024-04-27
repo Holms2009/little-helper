@@ -5,7 +5,7 @@
   import { auth, getUserCalendar, getUserData } from "@api";
   import { SideBar } from "@organisms";
   import { Modal } from "@templates";
-  import { Main, Calendar, Notes } from "@pages";
+  import { Main, Calendar, Notes, Account } from "@pages";
   import { modalsStore, userCalendarStore, userStore } from "@store";
 
   let modals: TModalsStore;
@@ -35,6 +35,7 @@
     <SideBar />
     <div class="app__page-content">
       <Route path="/" component={Main} />
+      <Route path="/account" component={Account} />
       <Route path="/calendar">
         <Calendar {calendar} />
       </Route>

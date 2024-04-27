@@ -20,6 +20,9 @@
       <AddEventMenu />
     </div>
   </div>
+  <div class={b('content')}>
+
+  </div>
 </section>
 
 <style lang="scss">
