@@ -20,7 +20,7 @@
       <AddEventMenu />
     </div>
   </div>
-  <div class={b('content')}>
+  <div class={b("content")}>
 
   </div>
 </section>

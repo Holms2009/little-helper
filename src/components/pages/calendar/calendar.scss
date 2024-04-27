@@ -10,6 +10,12 @@
     padding: 0 64px;
   }
 
+  &__content {
+    display       : flex;
+    flex-direction: column;
+    flex-grow     : 1;
+  }
+
   &__subtitle {
     @include font-16-regular;
 
@@ -60,5 +66,6 @@
     display              : grid;
     grid-template-columns: 400px 1fr;
     gap                  : 32px;
+    flex-grow            : 1;
   }
 }
