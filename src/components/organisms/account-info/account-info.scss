@@ -1,0 +1,15 @@
+@import '/src/shared/styles/';
+
+.account-info {
+  margin-top: 32px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}

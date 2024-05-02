@@ -4,43 +4,61 @@
   @include buttons-text;
 
   position: relative;
-  z-index: 1;
+  z-index : 1;
 
   padding: 16px 32px;
-  display: inline-block;
+  display: flex;
+  align-items: center;
 
   background: none;
-  border: none;
+  border    : none;
 
   transition: color 0.3s ease;
-  cursor: pointer;
+  cursor    : pointer;
 
   &::after {
     content: '';
 
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom  : 0;
+    left    : 0;
 
-    width: 5px;
+    width : 5px;
     height: 100%;
 
     background: var(--COLOR_BLUE_1);
     transition: width 0.3s ease;
-    z-index: -1;
+    z-index   : -1;
   }
 
-  &:hover {
-    color: $COLOR_WHITE_1;
+  &__icon {
+    margin-right: 16px;
+    width : 25px;
+    height: 25px;
 
-    &::after {
-      width: 100%;
-    }
+    transition: filter 0.2s ease;
+  }
+
+  &__text {
+    transition: color 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  &:hover &__text,
+  &_active &__text {
+    color: $COLOR_WHITE_1;
+  }
+
+  &:hover &__icon,
+  &_active &__icon {
+    filter: invert(1);
   }
 
   &_active {
     background: var(--COLOR_BLUE_1);
-    color: $COLOR_WHITE_1;
-    cursor: default;
+    cursor    : default;
   }
 }

@@ -3,14 +3,19 @@
 
   export let type = "text";
   export let value: string;
-  export let placeholder: string;
+  export let placeholder = '';
   export let disabled = false;
-  export let error = "";
+  export let error = '';
   export let required = false;
+  export let focusOnInit = false;
 
-  let inputEl: HTMLInputElement;  
+  let inputEl: HTMLInputElement;
 
   const b = block("input-field");
+
+  function initFocus(input: HTMLInputElement) {
+    focusOnInit && input.focus();
+  }
 </script>
 
 <div class={b()}>
@@ -19,6 +24,7 @@
     {required}
     bind:this={inputEl}
     bind:value
+    use:initFocus
     {placeholder}
     {disabled}
     {...{ type }}

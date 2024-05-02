@@ -1,5 +1,6 @@
 <script lang="ts">
   import { PageHeader } from "@molecules";
+  import { AccountInfo } from "@organisms";
   import { userStore } from "@store";
   import block from "bem-cn";
 
@@ -16,7 +17,9 @@
   </PageHeader>
 
   <div class={b("content")}>
-    <div class={b()}></div>
+    {#if user}
+      <AccountInfo {user} />
+    {/if}
   </div>
 </section>
 

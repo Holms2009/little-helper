@@ -1,6 +1,7 @@
 type TMenuItem = {
   text: string;
   href: string;
+  icon?: string;
 }
 
 type TDayOfWeek = {
